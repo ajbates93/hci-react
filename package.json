@@ -7,6 +7,30 @@
     "watch": "webpack --config webpack.config.js --watch --color",
     "build": "webpack --config webpack.config.js"
   },
+  "jest": {
+    "globals": {
+      "BaseUrl": "http://localhost:50163/"
+    },
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "roots": [
+      "<rootDir>/AppBin"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|less)$": "identity-obj-proxy",
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/test.fileMock.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ajbates93/hci-react.git"
@@ -26,10 +50,13 @@
     "react-dom": "^16.4.0"
   },
   "devDependencies": {
+    "@types/jest": "^19.2.4",
     "html-loader": "^0.4.5",
+    "jest": "^20.0.4",
     "source-map-loader": "^0.2.3",
     "ts-loader": "^2.3.1",
     "typescript": "^2.8.4",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
