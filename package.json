@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "webpack --config webpack.config.js --watch --color",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -17,14 +18,18 @@
   },
   "homepage": "https://github.com/ajbates93/hci-react#readme",
   "dependencies": {
+    "@types/lodash": "^4.14.109",
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
+    "lodash": "^4.17.10",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^5.0.0",
+    "html-loader": "^0.4.5",
     "source-map-loader": "^0.2.3",
-    "typescript": "^2.8.4"
+    "ts-loader": "^2.3.1",
+    "typescript": "^2.8.4",
+    "webpack": "^3.6.0"
   }
 }
