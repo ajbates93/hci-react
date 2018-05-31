@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-export interface HelloProps {
+export interface HCIRootProps {
     compiler: string;
     framework: string;
 }
 
-export class Hello extends React.Component<HelloProps, {}> {
+export class HCIRoot extends React.Component<HCIRootProps, {}> {
     render() {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+        return <h1>HCI York using {this.props.compiler} and {this.props.framework}!</h1>;
     }
 }

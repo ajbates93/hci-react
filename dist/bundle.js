@@ -79,7 +79,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
 var ReactDOM = __webpack_require__(2);
 var Hello_1 = __webpack_require__(3);
-ReactDOM.render(React.createElement(Hello_1.Hello, { compiler: "Typescript", framework: "React" }), document.getElementById("example"));
+ReactDOM.render(React.createElement(Hello_1.HCIRoot, { compiler: "Typescript", framework: "React" }), document.getElementById("example"));
 
 
 /***/ }),
@@ -106,22 +106,22 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __webpack_require__(0);
-var Hello = /** @class */ (function (_super) {
-    __extends(Hello, _super);
-    function Hello() {
+var HCIRoot = /** @class */ (function (_super) {
+    __extends(HCIRoot, _super);
+    function HCIRoot() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Hello.prototype.render = function () {
+    HCIRoot.prototype.render = function () {
         return React.createElement("h1", null,
-            "Hello from ",
+            "HCI York using ",
             this.props.compiler,
             " and ",
             this.props.framework,
             "!");
     };
-    return Hello;
+    return HCIRoot;
 }(React.Component));
-exports.Hello = Hello;
+exports.HCIRoot = HCIRoot;
 
 
 /***/ })
