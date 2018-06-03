@@ -1,19 +1,10 @@
 var packageConfig = require("./package.json");
 
 module.exports = {
-    entry: "./src/index.tsx",
+    entry: "./src/Main.tsx",
     output: {
         filename: "bundle.js",
         path: __dirname + "/dist"
-    },
-
-    devServer: {
-        port: 3000,
-        historyApiFallback: true,
-        inline: true,
-        proxy: {
-            "/": packageConfig["jest"]["globals"]["BaseUrl"]
-        }
     },
 
     // Enable sourcemaps for debugging webpack's output.
