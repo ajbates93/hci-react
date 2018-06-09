@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import {Header} from "./Header";
 import {Footer} from "./Footer";
 
@@ -10,7 +11,11 @@ export class HCIRoot extends React.Component<HCIRootProps, {}> {
         return (
             <div id="container">
                 <Header />
-                <h3>Some sample header</h3>
+                <main>
+                    <Switch>
+                        <Route />
+                    </Switch>
+                </main>
                 <p>Some sample text</p>
                 <Footer />
             </div>
